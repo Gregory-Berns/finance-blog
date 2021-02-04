@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&display=Montserrat:wght@400&display=swap=Kulim+Park:wght@200;700&family=Monoton&family=Maven+Pro&family=Poiret+One&family=Raleway:wght@400;700;800;900&family=Rammetto+One&family=Ranchers&family=Roboto:wght@100;900&family=Sacramento&family=Vibur&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='main.css')}}">
+
+    <!-- 
+    {% if title %}
+    <title>finance-blog-{{title}} </title>
+    {% else %}
+    <title>finance-blog</title>
+    {% endif%}
+    -->
+
+
+</head>
+
+<body>
+<!--Nav bar-->
+<nav class="navbar py-0 navbar-expand-sm navbar-light bg-light navbar-custom">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+
+            <span id="logo-title">Couch | Money</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        <div class="collapse navbar-collapse " id="navbarTogglerDemo02">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{{url_for('home')}}">home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{url_for('about')}}">about</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{url_for('register')}}">progress</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{url_for('register')}}">contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{url_for('login')}}">login</a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+<!--End of Nav bar-->
+    
+        {% with messages = get_flashed_messages(with_categories=true) %} 
+            {% if messages %} 
+                {% for category, message in messages %}
+                <div class="alert alert-{{category}} container m-5">
+                    {{message}}
+                </div>
+                {% endfor %} 
+            {% endif %} 
+        {% endwith %}      
+
+    {% block content%} {% endblock %}
+    <!--Footer section-->
+    <footer class="footer-home ">
+        <div class="container ">
+            <div class="row ">
+                <div class="col-md-4 ">
+                    <div class="align-middle" style="display: inline-block;">
+                        <img src="/assets/icons/icons8-right-arrow-48.png" alt="learn more" style="width:30px; height:20px">
+                        <br>
+                    </div>
+
+                    <div style="display: inline-flex;">
+                        <p><span class="join-me">join me on this journey</span>
+                            <br>
+                            <span class="author-footer">ARNOLD SCHWALTZ</span>
+                        </p>
+                    </div>
+
+
+                </div>
+                <div class="col-md-4 ">
+                    <div class="align-middle" style="display: inline-block;">
+                        <img src="/assets/icons/icons8-right-arrow-48.png" alt="learn more" style="width:20px; height:20px;">
+                        <br>
+                    </div>
+
+                    <div style="display: inline-flex;">
+                        <p class="mb-0"><span class="join-me">Become a partner and contributor </span>
+                            <br>
+                            <span class="author-footer ">/SUPPORT  THIS MISSION</span>
+                        </p>
+                    </div>
+                    <div class="container mt-0 " style="display: inline-flex;">
+                        <div class="d-inline-block" style="padding-right: 6px;">
+                            <a href=" ">
+                                <img src="/assets/icons/icons8-facebook-light.svg " alt="facebook " style="width: 20px; ">
+                            </a>
+                        </div>
+                        <div class="d-inline-block " style="padding-right: 6px;">
+                            <a href=" ">
+                                <img src="/assets/icons/twitter-block.png " alt="twitter " style="width: 20px; ">
+                            </a>
+                        </div>
+                        <div class="d-inline-block " style="padding-right: 6px;">
+                            <a href=" ">
+                                <img src="/assets/icons/icons8-instagram.svg " alt="instagram " style="width: 20px; ">
+                            </a>
+                        </div>
+                        <div class="d-inline-block " style="padding-right: 6px;">
+                            <a href=" ">
+                                <img src="/assets/icons/icons8-linkedin.svg " alt="linkedin " style="width: 20px; ">
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-4  mt-2">
+                    <div>
+                        <div class="join-me-3 mt-2">
+                            <span class="author-footer">/Get In Touch</span><br>
+                            <span class="join-me-2">
+                                Online Money Market 
+                                <br> 
+                                +254-0110-988-327 
+                                <br> 
+                                Schwaltz@cm.tech 
+                                <br> 
+                                Nairobi - Kenya
+                            </span>
+                            <br>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        </div>
+    </footer>
+    <!--End of footer-->
+
+    <!--Javascript and popper linked sources-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js " integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js " integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj " crossorigin="anonymous "></script>
+</body>
+
+</html>
