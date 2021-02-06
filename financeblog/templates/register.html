@@ -24,7 +24,7 @@
                                         {% if form.username.errors %}
                                             {{ form.username(class='form-control border-0 shadow-sm px-4 text-primary is-invalid', id="inputUsername" ,type="username" ,placeholder="Username")}}
                                             <div class="invalid-feedback">
-                                            {% for error in form.username.erros  %}
+                                            {% for error in form.username.errors  %}
                                                 <span>{{error}}</span>
                                             {% endfor %}
                                             </div>
@@ -36,7 +36,7 @@
                                         {% if form.email.errors %}
                                             {{ form.email(class='form-control border-0 shadow-sm px-4 text-primary is-invalid', id="inputEmail" ,type="email" ,placeholder="Email")}}
                                             <div class="invalid-feedback">
-                                            {% for error in form.email.erros  %}
+                                            {% for error in form.email.errors  %}
                                                 <span>{{error}}</span>
                                             {% endfor %}
                                             </div>
@@ -50,7 +50,7 @@
                                         {% if form.password.errors %}
                                             {{ form.password(class='form-control border-0 shadow-sm px-4 text-primary is-invalid', id="inputPassword" ,type="password" ,placeholder="Password")}}
                                             <div class="invalid-feedback">
-                                            {% for error in form.password.erros  %}
+                                            {% for error in form.password.errors  %}
                                                 <span>{{error}}</span>
                                             {% endfor %}
                                             </div>
