@@ -1,5 +1,5 @@
 from flask import render_template, url_for, flash, redirect
-from financeblog import app
+from financeblog import app, db, bcrypt
 from financeblog.models import User, Post
 from financeblog.forms import RegistrationForm, LoginForm
 
@@ -20,17 +20,12 @@ posts = [
         'content': 'Millionaires out there whether self made or otherwise They never tell you what they actually realistically did to make their first dollar later snowballing into millions.',
         'date_posted': 'Jan 21, 2021'
     },
+
     {
         'title': 'Lift-Off',
         'content': 'Millionaires out there whether self made or otherwise They never tell you what they actually realistically did to make their first dollar later snowballing into millions.',
         'date_posted': 'Jan 21, 2021'
-    },
-    {
-        'title': 'Reaping Off',
-        'content': 'Millionaires out there whether self made or otherwise They never tell you what they actually realistically did to make their first dollar later snowballing into millions.',
-        'date_posted': 'Jan 21, 2021'
     }
-
 ]
 
 
@@ -49,9 +44,13 @@ def about():
 def register():
     form = RegistrationForm()
     if form.validate_on_submit():
+        hashed_password = bcrypt.generate_password_hash(form.password.data).decode('utf-8')
+        user = User(username=form.username.data, email=form.email.data, password=hashed_password)
+        db.session.add(user)
+        db.session.commit()
         flash(
-            f'Account created for {form.username.data} successfully!', 'success')
-        return redirect(url_for('home'))
+            'Your account has been created successfully! Login to continue', 'success')
+        return redirect(url_for('login'))
     return render_template('register.html', title='Register', form=form)
 
 
