@@ -1,0 +1,35 @@
+{% extends 'layout.html' %} {% block content %}
+<div class="container">
+    <div class="">
+        <form method="POST" action="" enctype="multipart/form-data">
+            <img src="{{image_file}}" id="post-picture" class="responsive-img" />
+            <h4 class="login-title">{{legend}}</h4>
+            {{form.hidden_tag()}}
+            <div class="input-field">
+                <div style="padding-bottom: 10px">{{form.post_picture.label()}}</div>
+                {{form.post_picture()}} {% if form.post_picture.errors %} {% for error in form.post_picture.errors %}
+                <span style="color: red">{{error}}</span><br /> {% endfor %} {% endif %}
+            </div>
+            <div class="input-field">
+                {{form.title.label()}} {% if form.title.errors %} {{form.title(class="materialize-textarea is-invalid") }}
+                <div class="invalid-feedback">
+                    {% for error in form.title.errors %}
+                    <span style="color: red"> {{error}} </span> {% endfor %}
+                </div>
+                {% else %} {{form.title}} {% endif %}
+            </div>
+            <div class="input-field">
+                {{form.content.label()}} {% if form.content.errors %} {{form.content }}
+                <div class="invalid-feedback">
+                    {% for error in form.content.errors %}
+                    <span>{{error}}</span> {% endfor %}
+                </div>
+                {% else %} {{form.content}} {% endif %}
+            </div>
+            <div class="input-field">
+                {{form.submit(class="btn btn-outline-dark btn-large")}}
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

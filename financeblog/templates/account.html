@@ -1,0 +1,59 @@
+{% extends "layout.html" %} {% block content%}
+<div class="container row mb-5 mt-3" , style="background-color: rgb(248, 245, 242)">
+    <div class="col-md-5 container mt-4 bg-white">
+        <div class="container bg-light mt-2 bg-white">
+            <br />
+            <h2>My Account</h2>
+            <img class="rounded-circle img-responsive" src="{{ image_file }}" alt="" style="width: 100px; height: 100px" />
+            <br />
+            <div class="container">
+                <p>
+                    <br />
+                    <span style="text-transform: uppercase">
+						{{ current_user.username}}
+					</span>
+                    <br /> {{ current_user.email}}
+                </p>
+            </div>
+        </div>
+        <div class="bg-white">
+            <div class="login d-flex align-items-center">
+                <!-- Demo content-->
+                <div class="container">
+                    <div class="">
+                        <div class="mt-1">
+                            <form method="POST" action="" enctype="multipart/form-data">
+                                {{ form.hidden_tag() }}
+                                <div class="form-group mb-3">
+                                    {% if form.username.errors %} {{ form.username(class='form-control border-0 shadow-sm px-4 text-primary is-invalid', id="inputUsername" ,type="username" ,placeholder="Username")}}
+                                    <div class="invalid-feedback">
+                                        {% for error in form.username.errors %}
+                                        <span>{{error}}</span> {% endfor %}
+                                    </div>
+                                    {% else %} {{ form.username(class='form-control border-0 shadow-sm px-4 text-primary', id="inputUsername" ,type="username" ,placeholder="Username")}} {% endif %}
+                                </div>
+                                <div class="form-group mb-2">
+                                    {% if form.email.errors %} {{ form.email(class='form-control border-0 shadow-sm px-4 text-primary is-invalid', id="inputEmail" ,type="email" ,placeholder="Email")}}
+                                    <div class="invalid-feedback">
+                                        {% for error in form.email.errors %}
+                                        <span>{{error}}</span> {% endfor %}
+                                    </div>
+                                    {% else %} {{ form.email(class='form-control border-0 shadow-sm px-4 text-primary', id="inputEmail" ,type="username" ,placeholder="Email")}} {% endif %}
+                                </div>
+                                <div class="form-group mb-2">
+                                    <br /> {{form.picture.label()}} <br /> {{form.picture(class="form-control-file")}} {% if form.picture.errors %} {% for error in form.picture.errors %}
+                                    <span class="text-danger">{{error}}</span> <br /> {% endfor %} {% endif %}
+                                </div>
+                                <button type="submit" class="btn btn-dark btn-lg text-uppercase mb-2 mt-3">
+									Update
+								</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- End -->
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
