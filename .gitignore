@@ -1,4 +1,6 @@
 logs/
 assets/
 financeblog/static/icons/
+financeblog/static/images/
+financeblog/static/
 __pycache__/
