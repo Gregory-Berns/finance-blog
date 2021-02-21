@@ -1,44 +1,47 @@
 body {
-    font-family: 'Raleway', sans-serif, 'Maven Pro', 'Ranchers', 'Vibur';
-    font-family: 'Kulim Park', sans-serif;
-    font-family: 'Libre Baskerville', serif;
-    font-family: 'Maven Pro', sans-serif;
-    font-family: 'Poiret One', cursive;
-    font-family: 'Raleway', sans-serif;
-    font-family: 'Rammetto One', cursive;
-    font-family: 'Ranchers', cursive;
-    font-family: 'Roboto', sans-serif;
-    font-family: 'Sacramento', cursive;
-    font-family: 'Vibur', cursive;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Raleway", sans-serif, "Maven Pro", "Ranchers", "Vibur";
+    font-family: "Kulim Park", sans-serif;
+    font-family: "Libre Baskerville", serif;
+    font-family: "Maven Pro", sans-serif;
+    font-family: "Poiret One", cursive;
+    font-family: "Raleway", sans-serif;
+    font-family: "Rammetto One", cursive;
+    font-family: "Ranchers", cursive;
+    font-family: "Roboto", sans-serif;
+    font-family: "Sacramento", cursive;
+    font-family: "Vibur", cursive;
+    font-family: "Montserrat", sans-serif;
+    font-family: 'Shadows Into Light Two', cursive;
     /*font-family: 'Monoton', cursive;*/
-    background-color: rgb(248, 245, 242);
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 @font-face {
-    font-family: 'gilroyextrabold';
-    src: url('./assets/Fonts/webfontkit/Gilroy/gilroy-extrabold-webfont.woff2') format('woff2'), url('/assets/Fonts/webfontkit/Gilroy/gilroy-extrabold-webfont.woff') format('woff');
+    font-family: "gilroyextrabold";
+    src: url("/static/fonts/webfontkit/Gilroy/gilroy-extrabold-webfont.woff2") format("woff2"), url("/assets/Fonts/webfontkit/Gilroy/gilroy-extrabold-webfont.woff") format("woff");
     font-weight: 600;
     font-style: italic;
 }
 
 @font-face {
-    font-family: 'cascadia_codebold';
-    src: url('/assets/Fonts/webfontkit/Cascadia/cascadiacode-bold-webfont.woff2') format('woff2'), url('/assets/Fonts/webfontkit/Cascadia/cascadiacode-bold-webfont.woff') format('woff');
+    font-family: "cascadia_codebold";
+    src: url("/static/fonts/webfontkit/Cascadia/cascadiacode-bold-webfont.woff2") format("woff2"), url("/assets/Fonts/webfontkit/Cascadia/cascadiacode-bold-webfont.woff") format("woff");
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'chunkfive_printregular';
-    src: url('chunk_five_print-webfont.woff2') format('woff2'), url('chunk_five_print-webfont.woff') format('woff');
+    font-family: "chunkfive_printregular";
+    src: url("chunk_five_print-webfont.woff2") format("woff2"), url("chunk_five_print-webfont.woff") format("woff");
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'libre_baskervilleitalic';
-    src: url('/assets/Fonts/webfontkit/libre-bakersville/librebaskerville-italic-webfont.woff2') format('woff2'), url('/assets/Fonts/webfontkit/libre-bakersville/librebaskerville-italic-webfont.woff') format('woff');
+    font-family: "libre_baskervilleitalic";
+    src: url("/static/fonts/webfontkit/libre-bakersville/librebaskerville-italic-webfont.woff2") format("woff2"), url("/assets/Fonts/webfontkit/libre-bakersville/librebaskerville-italic-webfont.woff") format("woff");
     font-weight: normal;
     font-style: normal;
 }
@@ -47,22 +50,22 @@ body {
 /*bifocals*/
 
 @font-face {
-    font-family: 'bifocalsblack-italic';
-    src: url('bifocals_black_italic-webfont.woff2') format('woff2'), url('bifocals_black_italic-webfont.woff') format('woff');
+    font-family: "bifocalsblack-italic";
+    src: url("bifocals_black_italic-webfont.woff2") format("woff2"), url("bifocals_black_italic-webfont.woff") format("woff");
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'bifocalsblack';
-    src: url('/assets/Fonts/webfontkit/Bifocals/bifocals_black-webfont.woff2') format('woff2'), url('/assets/Fonts/webfontkit/Bifocals/bifocals_black-webfont.woff') format('woff');
+    font-family: "bifocalsblack";
+    src: url("/static/fonts/webfontkit/Bifocals/bifocals_black-webfont.woff2") format("woff2"), url("/assets/Fonts/webfontkit/Bifocals/bifocals_black-webfont.woff") format("woff");
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'bifocalsregular';
-    src: url('/assets/Fonts/webfontkit/Bifocals/bifocals-webfont.woff2') format('woff2'), url('/assets/Fonts/webfontkit/Bifocals/bifocals-webfont.woff') format('woff');
+    font-family: "bifocalsregular";
+    src: url("/static/fonts/webfontkit/Bifocals/bifocals-webfont.woff2") format("woff2"), url("/assets/Fonts/webfontkit/Bifocals/bifocals-webfont.woff") format("woff");
     font-weight: normal;
     font-style: normal;
 }
@@ -71,8 +74,8 @@ body {
 /*gentona font*/
 
 @font-face {
-    font-family: 'gentonaextrabold';
-    src: url('/assets/Fonts/webfontkit/Gentona/rene_bieder_-_gentona_extrabold_demo-webfont.woff2') format('woff2'), url('/assets/Fonts/webfontkit/Gentona/rene_bieder_-_gentona_extrabold_demo-webfont.woff') format('woff');
+    font-family: "gentonaextrabold";
+    src: url("/static/fonts/webfontkit/Gentona/rene_bieder_-_gentona_extrabold_demo-webfont.woff2") format("woff2"), url("/assets/Fonts/webfontkit/Gentona/rene_bieder_-_gentona_extrabold_demo-webfont.woff") format("woff");
     font-weight: normal;
     font-style: normal;
 }
@@ -81,8 +84,8 @@ body {
 /*gilam font*/
 
 @font-face {
-    font-family: 'gilam-black';
-    src: url('/assets/Fonts/webfontkit/Gilam/gilamdemo-black-webfont.woff2') format('woff2'), url('/assets/Fonts/webfontkit/Gilam/gilamdemo-black-webfont.woff') format('woff');
+    font-family: "gilam-black";
+    src: url("/static/fonts/webfontkit/Gilam/gilamdemo-black-webfont.woff2") format("woff2"), url("/assets/Fonts/webfontkit/Gilam/gilamdemo-black-webfont.woff") format("woff");
     font-weight: normal;
     font-style: normal;
 }
@@ -91,15 +94,15 @@ body {
 /*mont fonts*/
 
 @font-face {
-    font-family: 'mont-extralight';
-    src: url('/assets/Fonts/webfontkit/Mont-Solo/montdemo-extralight-webfont.woff2') format('woff2'), url('/assets/Fonts/webfontkit/Mont-Solo/montdemo-extralight-webfont.woff') format('woff');
+    font-family: "mont-extralight";
+    src: url("/static/fonts/webfontkit/Mont-Solo/montdemo-extralight-webfont.woff2") format("woff2"), url("/assets/Fonts/webfontkit/Mont-Solo/montdemo-extralight-webfont.woff") format("woff");
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'mont-heavy';
-    src: url('/assets/Fonts/webfontkit/Mont-Solo/montdemo-heavy-webfont.woff2') format('woff2'), url('/assets/Fonts/webfontkit/Mont-Solo/montdemo-heavy-webfont.woff') format('woff');
+    font-family: "mont-heavy";
+    src: url("/static/fonts/webfontkit/Mont-Solo/montdemo-heavy-webfont.woff2") format("woff2"), url("/assets/Fonts/webfontkit/Mont-Solo/montdemo-heavy-webfont.woff") format("woff");
     font-weight: normal;
     font-style: normal;
 }
@@ -108,8 +111,8 @@ body {
 /*solo fonts*/
 
 @font-face {
-    font-family: 'soloregular';
-    src: url('/assets/Fonts/webfontkit/Mont-Solo/solo-webfont.woff2') format('woff2'), url('/assets/Fonts/webfontkit/Mont-Solo/solo-webfont.woff') format('woff');
+    font-family: "soloregular";
+    src: url("/static/fonts/webfontkit/Mont-Solo/solo-webfont.woff2") format("woff2"), url("/assets/Fonts/webfontkit/Mont-Solo/solo-webfont.woff") format("woff");
     font-weight: normal;
     font-style: normal;
 }
@@ -118,30 +121,27 @@ body {
 /*Gilroy-Heavy*/
 
 @font-face {
-    font-family: 'GilroyHeavy';
-    src: url('/assets/Fonts/webfontkit/Gilroy-Heavy/gilroy-heavy-webfont.woff2') format('woff2'), url('/assets/Fonts/webfontkit/Gilroy-Heavy/gilroy-heavy-webfont.woff') format('woff');
+    font-family: "GilroyHeavy";
+    src: url("/static/fonts/webfontkit/Gilroy-Heavy/gilroy-heavy-webfont.woff2") format("woff2"), url("/assets/Fonts/webfontkit/Gilroy-Heavy/gilroy-heavy-webfont.woff") format("woff");
     font-weight: normal;
     font-style: normal;
 }
 
 
-/*navigation bar*/
-
-.image-class,
-.img-responsive {
-    max-width: 100%;
-    max-height: 80%;
-    display: inline-flex;
-}
+/* Navigation bar*/
 
 .navbar {
     min-height: 70px;
+    position: relative;
+    background: none;
+    z-index: 10;
+    color: white;
 }
 
 .navbar-custom {
     padding: 0px;
     margin: 0px;
-    min-height: 50px;
+    min-height: 40px;
 }
 
 .navbar-brand {
@@ -156,31 +156,28 @@ body {
     padding: 3px 5px !important;
 }
 
-@media (min-width: 320px) {
-    .navbar-nav>li>a {
-        /* (80px - line-height of 27px) / 2 = 26.5px */
-        padding-top: 10px;
-        padding-bottom: 10px;
-        line-height: 10px;
-    }
+
+/* navlink animation Circle */
+
+.nav-link:hover {
+    background-color: #d34141;
+    color: whitesmoke !important;
 }
 
 .nav-link {
-    font-size: .8rem;
+    font-size: 0.9rem;
     letter-spacing: 0.5px;
-    font-weight: 600;
+    font-weight: 800;
     text-transform: uppercase;
-    font-family: 'soloregular';
+    font-family: "soloregular";
+    color: #d34141!important;
 }
 
 #logo-title {
     letter-spacing: -1.5px;
     display: inline-block;
-    font-family: 'Raleway';
-}
-
-a {
-    color: #272727;
+    font-family: "Raleway";
+    color: #d34141;
 }
 
 .navbar-right {
@@ -190,208 +187,407 @@ a {
 }
 
 
-/* Section*/
+/* Navigation bar*/
 
-section {
-    padding-top: 50px;
-    padding-bottom: 50px;
-    padding-left: 20px;
-    padding-right: 20px;
-}
 
-@media (max-width: 1440px) {
-    #welcome .btn {
-        width: 40%;
-    }
-}
+/* Landing page */
 
-@media (max-width: 1024px) {
-    #welcome .btn {
-        width: 40%;
-    }
-}
-
-@media (max-width: 769px) {
-    #welcome .btn {
-        width: 40%;
-    }
-}
-
-@media (max-width: 481px) {
-    #welcome .btn {
-        width: 50%;
-    }
-}
-
-@media (max-width: 376px) {
-    #welcome .btn {
-        width: 100%;
-    }
-}
-
-#welcome {
-    background-color: #f0f5f4;
-}
-
-#welcome .col {
-    justify-content: center;
-    flex-direction: column;
-    display: flex;
-}
-
-#welcome .img-col {
-    justify-content: flex-end;
-    margin-top: 10px;
-}
-
-.col1 {
-    margin-top: 5px;
-    padding-top: 5px;
-    padding-right: 10px;
-    margin-right: 10px;
-    margin-left: 20px;
-    background-color: whitesmoke;
-}
-
-.card-column {
-    margin: 0px;
-    padding: 5px;
-}
-
-p,
-.btn {
-    font-weight: 500;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1rem;
-}
-
-#welcome img {
-    max-width: 130% !important;
+.showcase {
+    position: relative;
+    right: 0;
     width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    z-index: 2;
 }
 
-#welcome span {
-    font-size: small;
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #03a9f4;
+    mix-blend-mode: overlay;
 }
 
-.welcome-social-icons div {
-    border: black solid 1px;
-    padding: 6px;
+.showcase video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.6;
 }
 
-
-/*content section*/
-
-#content .row {
-    display: flex;
+.home-wrapper {
+    z-index: 10;
+    position: relative;
 }
 
-.title-tail,
-.title-main {
-    font-family: chunkfive_printregular;
-}
-
-#content .card-column {
-    display: inline-flex;
-    padding: 5px;
-}
-
-.main-content {
-    background-color: rgb(206, 239, 241);
-}
-
-.author {
-    font-family: 'Sacramento';
-    font-size: 1.5rem;
-    letter-spacing: 3px;
-    font-weight: 600;
-}
-
-.hr,
-.hr-1 {
-    max-width: 250px;
-    border: 1px solid black;
-    margin-top: 30px;
-    margin-left: 10px;
-    margin-right: 50px;
-    padding-right: 100px;
-}
-
-.home-title {
-    font-family: 'gilam-black';
-    font-size: 3.2rem;
-    font-weight: 900;
+.million-title {
+    font-family: "soloregular";
+    font-weight: 500;
+    letter-spacing: 5px;
     color: white;
-    justify-content: center;
-    line-height: 3rem;
-}
-
-@media (max-width:426px) {
-    .home-title {
-        font-family: 'gilam-black';
-        font-size: 2.2rem;
-        font-weight: 900;
-        color: white;
-        justify-content: center;
-        line-height: 2rem;
-    }
-}
-
-@media (max-width: 426px) {
-    .start-page {
-        margin-left: 0px;
-        margin-right: 0px;
-        margin-top: 0px;
-        padding: 0px;
-        color: black;
-    }
-}
-
-@media (max-width: 425px) {
-    h5 {
-        margin-left: 10px;
-        margin-right: 0px;
-        margin-top: 0px;
-        padding: 0px;
-        color: black;
-        letter-spacing: 3px;
-        font-size: 2.2rem;
-    }
+    text-transform: capitalize !important;
 }
 
 .journey {
-    background-color: whitesmoke;
-    width: 6rem;
-    display: inline-flex;
-    padding-left: 30px;
-    margin-left: 30px;
-    padding-top: 60px;
-    padding-bottom: 0px;
+    letter-spacing: 10px;
+}
+
+.road-title,
+.potential-title {
+    font-family: "gentonaextrabold";
+    font-size: 3.5rem;
+    line-height: 3rem;
+    color: whitesmoke;
+}
+
+.potential-title {
+    margin-top: 50px;
+}
+
+.home-join-me {
+    font-family: "gilam-black";
+    font-weight: lighter;
+    color: white;
+    z-index: 20;
+    line-height: 1.2rem;
+    max-width: 200px;
+}
+
+.follow-btn {
+    background-color: #d34141;
+    width: 120px;
+    height: 40px;
+    font-size: .9rem;
+    position: relative;
+    border-radius: 0px !important;
+}
+
+.follow-arrow {
+    display: inline-block;
+}
+
+.social-container {
+    padding-top: 5px;
+}
+
+.social-icons-home,
+.social,
+.social-about {
+    color: white;
+    margin-right: 4px;
+    font-size: 1.2rem;
+}
+
+.social-about {
+    color: black;
+}
+
+.goal {
+    margin-top: 40px;
+    z-index: 10;
+}
+
+.goal-para,
+.goal-para-2 {
+    font-family: "mont-extralight";
+    line-height: .9rem;
+    font-size: .9rem;
+    color: white;
+    font-weight: 300px;
+    letter-spacing: -.5px;
+}
+
+.about-time {
+    margin-top: 60px;
     margin-bottom: 15px;
 }
 
-@media (max-width: 375px) {
-    .journey {
-        background-color: whitesmoke;
-        width: 2.2rem;
-        display: inline-flex;
-        padding-left: 10px;
-        margin-left: 0px;
-        padding-top: 30px;
-        padding-bottom: 0px;
-        margin-bottom: 15px;
+@media only screen and (max-device-width:1440px) {
+    .goal-2 {
+        display: none;
+    }
+    .post-title {
+        font-size: 36px;
+    }
+    .about-para {
+        margin: 0px 20px;
     }
 }
 
-.road-riches,
-.join-arnold {
-    padding-left: 40px;
+@media only screen and (max-device-width:1024px) {
+    .goal-2 {
+        display: none;
+    }
+    .post-title {
+        font-size: 36px;
+    }
+    .about-para {
+        margin: 0px 20px;
+    }
 }
 
-h2,
-.title-main,
-h4 {
+@media only screen and (max-device-width:769px) {
+    .goal-2 {
+        display: none;
+    }
+    .goal-para {
+        color: white;
+        max-width: 400px;
+    }
+    .social-container-about,
+    .about-time {
+        width: 280px;
+        margin-left: 0px;
+        margin-right: 5px;
+        margin-top: 0px;
+        margin-bottom: 20px;
+    }
+    .post-title {
+        font-size: 46px;
+    }
+}
+
+@media only screen and (max-device-width:576px) and (max-device-width:425px) {
+    .goal {
+        display: none;
+    }
+    .goal-para {
+        color: white;
+    }
+    .goal-2 {
+        display: inline-flex;
+        margin-top: 0px;
+        max-width: 300px;
+    }
+    .social-container-about,
+    .about-time {
+        margin-right: 20px;
+        margin-top: 30px;
+        margin-bottom: 15px;
+    }
+    .about-content {
+        margin-top: 10px;
+    }
+    .post-title {
+        font-size: 44px;
+    }
+}
+
+@media only screen and (max-device-width:375px) {
+    .goal {
+        display: none;
+    }
+    .goal-2 {
+        display: inline-flex;
+        margin-top: 0px;
+        max-width: 250px;
+    }
+    .goal-para {
+        color: white;
+    }
+    .about-time {
+        margin-left: 0px;
+        margin-right: 40px;
+        margin-top: 0px;
+        padding: 10px;
+    }
+    .social-container-about {
+        margin-bottom: 15px;
+    }
+    .post-title {
+        font-size: 36px;
+    }
+}
+
+.progress-span {
+    font-family: 'libre_baskervilleitalic';
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: .8rem;
+}
+
+@media only screen and (max-device-width:360px) {
+    .about-image {
+        max-width: 300px;
+    }
+    .goal {
+        display: none;
+    }
+    .goal-2 {
+        display: inline-flex;
+        margin-top: 0px;
+        max-width: 250px;
+        margin-bottom: 50px;
+    }
+    .goal-para {
+        color: white;
+    }
+    .author {
+        font-weight: lighter;
+        color: white;
+    }
+    .social-container-about {
+        margin-bottom: 15px;
+    }
+    .post-title {
+        font-size: 34px;
+    }
+}
+
+@media only screen and (max-device-width:320px) {
+    .about-image {
+        max-width: 300px;
+    }
+    .goal {
+        display: none;
+    }
+    .goal-2 {
+        margin-top: 50px;
+        max-width: 250px;
+        margin-bottom: 50px;
+    }
+    .goal-para {
+        color: white;
+    }
+    .social-container-about,
+    .about-time {
+        margin-right: 30px;
+        margin-top: 10px;
+        margin-bottom: 15px;
+    }
+    .post-title {
+        font-size: 31px;
+    }
+    .author {
+        color: white;
+    }
+}
+
+
+/* End of Landing page */
+
+
+/* Progress */
+
+.progress {
+    font-family: "soloregular";
+    font-size: xx-large;
+    display: absolute;
+    margin-top: 20px;
+    height: 50px;
+    justify-content: center;
+    background-color: white;
+    font-weight: 900;
+}
+
+.post-container {
+    margin: 0px;
+    padding: 0px;
+    display: relative;
+}
+
+.article-footer-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.article-author {
+    font-family: "bifocalsregular", sans-serif;
+    font-size: 10px;
+    font-weight: 200;
+    text-decoration: none !important;
+    color: rgb(24, 68, 163);
+}
+
+.card-text {
+    line-height: 1rem;
+    font-weight: lighter;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.about-para {
+    font-family: 'Raleway';
+    font-size: .95rem;
+    font-weight: 400;
+    color: #504949;
+    letter-spacing: -.4px;
+    line-height: 1.2rem;
+}
+
+.about-header {
+    letter-spacing: 16px;
+    font-family: 'soloregular';
+    font-size: 1.3rem;
+}
+
+.about-image {
+    min-width: 200px;
+    width: 100%;
+}
+
+.about-image-div {
+    object-fit: contain;
+    max-width: 500px;
+}
+
+.about-content {
+    margin: 0px 20px;
+    padding: 0px 20px;
+}
+
+.social-container-about {
+    margin-left: 0px;
+    margin-right: 30px;
+    margin-top: 0px;
+}
+
+.card-title,
+.about-title {
     color: rgb(11, 40, 41);
+    font-weight: 700;
+    text-align: left;
+    letter-spacing: -.5px;
+    margin-bottom: 20px;
+    font-family: 'gilroyextrabold';
+    font-size: 1.25rem;
+    line-height: 1.3rem;
+}
+
+.potential-sub-title {
+    font-family: 'GilroyHeavy';
+    font-size: 1.5rem;
+    color: rgb(53, 51, 51);
+    font-weight: 900;
+    line-height: 1.6rem;
+    letter-spacing: 3px;
+}
+
+.guides-title {
+    font-family: 'Libre Baskerville';
+    font-size: 15px;
+    color: rgb(248, 245, 245);
+    font-weight: lighter;
+    margin-bottom: 5px;
+}
+
+.guides-para {
+    font-family: 'bifocalsregular';
+    font-size: .95rem;
+    font-weight: 400;
+    color: #504949;
+    line-height: 1rem;
+    margin-top: 20px;
+}
+
+.card-title-summary {
+    color: white;
     font-weight: 700;
     text-align: left;
     letter-spacing: -.5px;
@@ -400,116 +596,19 @@ h4 {
     font-size: 1.4rem;
 }
 
-h3 {
-    color: white;
-    font-family: 'Raleway';
-    font-size: 1.1rem;
-    font-weight: 900;
-}
-
-h5 {
-    font-family: 'Poiret One';
-    font-weight: 600;
-    font-size: 1.6rem;
-    letter-spacing: 26px;
-}
-
-.top-title {
-    font-family: 'Poiret One';
-    font-weight: 400;
-    font-size: 1.6rem;
-    letter-spacing: 12px;
-}
-
-@media (max-width: 426px) {
-    .top-title {
-        font-family: 'Poiret One';
-        font-weight: 400;
-        font-size: 1.2rem;
-        letter-spacing: 1px;
-    }
-}
-
-@media (max-width: 426px) {
-    .road-riches {
-        margin-left: 0px;
-        padding-left: 0px;
-    }
-}
-
-@media (max-width: 426px) {
-    .goal-start {
-        margin-left: 30px;
-        padding-left: 10px;
-    }
-}
-
-@media (max-width: 426px) {
-    .recent-progress {
-        margin: 5px;
-    }
-}
-
-.join-me {
-    font-family: 'Rammetto One';
-    font-size: 1rem;
-    letter-spacing: 1px;
-}
-
-.ar {
-    letter-spacing: 10px;
-    font-size: 7rem;
-    line-height: -2px;
-    font-family: 'Maven Pro';
-    font-weight: 900;
-}
-
-.welcome-note {
-    padding: 50px 20px 50px 20px;
-    margin: 10px;
-    font-family: 'Raleway';
-}
-
 .card-img-top {
     width: 100%;
-    height: 50vh;
+    height: 45vh;
     object-fit: cover;
-}
-
-.dot {
-    height: 90px;
-    width: 90px;
-    background-color: #FFF3F5;
-    border-radius: 50%;
-    display: inline-block;
-    padding-top: 50px;
-    position: relative;
-}
-
-.pagination {
-    font-family: 'Raleway';
 }
 
 .special-card {
     background-color: black;
     border-style: none;
-    padding: 30px;
-    margin: 0px;
-    color: rgb(192, 189, 189);
+    padding: 10px;
+    margin: 10px;
+    color: white;
     border-radius: 0px;
-}
-
-.card-text {
-    line-height: 1rem;
-    font-weight: lighter;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-.card-text-2 {
-    line-height: 1.4rem;
-    font-size: 1.2rem;
-    font-weight: 350;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .card-rectangle {
@@ -530,28 +629,56 @@ h5 {
     margin-left: 40px;
 }
 
-@media (max-width: 426px) {
-    .card-rectangle-title {
-        width: 60px;
-        height: 10px;
-        border: 0px;
-        background-color: #C2FCF4;
-        margin-left: 0px;
-        margin-left: 0px;
-    }
+.footer-address {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+    font-size: 12px;
+    letter-spacing: -0.5px;
+    color: white;
 }
 
-.card-body {
-    padding: 8px;
-    margin: 5px;
+.footer-list {
+    list-style: none;
+    text-decoration: none;
 }
 
-.progress-span,
-.about-span {
-    font-family: 'libre_baskervilleitalic';
-    font-weight: 500;
-    font-size: 1.5rem;
-    line-height: .8rem;
+.footer-link {
+    font-family: "soloregular";
+    text-decoration: none;
+    text-transform: capitalize;
+    color: white;
+    letter-spacing: -.7px;
+    line-height: .4rem;
+    font-size: 0.8rem;
+}
+
+.join-me-footer {
+    font-family: 'Raleway';
+    font-weight: 400;
+    font-size: 0.8rem;
+    letter-spacing: -0.5px;
+    text-decoration: none;
+    color: white;
+    line-height: 0.9rem;
+}
+
+.join-me-footer-0 {
+    font-family: libre_baskervilleitalic;
+    font-weight: 100;
+    font-size: 11px;
+    letter-spacing: -0.5px;
+    text-decoration: none;
+    color: white;
+}
+
+.join-me-footer-1 {
+    font-family: 'Raleway';
+    font-weight: 400;
+    font-size: 0.8rem;
+    letter-spacing: -0.5px;
+    text-decoration: none;
+    color: white;
+    line-height: 0.9rem;
 }
 
 .author-footer {
@@ -560,266 +687,99 @@ h5 {
     font-weight: 900;
     letter-spacing: -1px;
     line-height: 4px;
-}
-
-.join-me {
-    font-family: libre_baskervilleitalic;
-    font-weight: 100;
-    font-size: 11px;
-    letter-spacing: -0.5px;
-    text-decoration: none;
-    color: #757777;
-}
-
-.footer-address {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 100;
-    font-size: 12px;
-    letter-spacing: -0.5px;
-}
-
-.join-me-2 {
-    font-family: 'Raleway';
-    font-weight: 400;
-    font-size: 0.8rem;
-    letter-spacing: -0.5px;
-    text-decoration: none;
-    color: #59594F;
-    line-height: 0.9rem;
-}
-
-.join-me-3 {
-    font-family: 'Raleway';
-    font-weight: 400;
-    font-size: 0.8rem;
-    letter-spacing: -0.5px;
-    text-decoration: none;
-    color: #0a0a02;
-    line-height: 0.9rem;
+    color: white;
 }
 
 .footer-home {
-    background-color: white;
+    background-color: black;
     padding: 60px 40px;
 }
 
 
-/* About.html Styles*/
+/* Section*/
 
-.guides,
-.title-main {
-    margin: 0px 0px 30px;
-    padding: 0px 30px;
+.card-column {
+    margin: 0px;
+    padding: 5px;
+    border-radius: 0px;
 }
 
-.purpose-section {
-    margin-left: 60px;
-    margin-right: 60px;
-    padding-left: 20px;
-    padding-right: 20px;
+.btn {
+    font-weight: 500;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
 }
 
-@media (max-width:1440px) {
-    .about-title {
-        font-family: 'GilroyHeavy';
-        font-size: 3.4rem;
-        color: white;
-        font-weight: 1000;
-        line-height: 2.5rem;
-        letter-spacing: .5px;
-    }
-}
 
-@media (max-width:1025px) {
-    .about-title {
-        font-family: 'GilroyHeavy';
-        font-size: 3.3rem;
-        color: white;
-        font-weight: 1000;
-        line-height: 2.5rem;
-        letter-spacing: .5px;
-    }
-}
+/*content section*/
 
-@media (max-width:769px) {
-    .about-title {
-        font-family: 'GilroyHeavy';
-        font-size: 3rem;
-        color: white;
-        font-weight: 1000;
-        line-height: 2.5rem;
-        letter-spacing: .5px;
-    }
-}
-
-@media (max-width:426px) {
-    .about-title {
-        font-family: 'GilroyHeavy';
-        font-size: 2rem;
-        color: white;
-        font-weight: 1000;
-        line-height: 2rem;
-        letter-spacing: .8.5px;
-    }
-}
-
-@media (max-width: 375px) {
-    .about-title,
-    .start-page {
-        font-family: 'GilroyHeavy';
-        font-size: 1.8rem;
-        color: white;
-        font-weight: 1000;
-        line-height: 2rem;
-        letter-spacing: .8.5px;
-    }
-}
-
-@media (max-width: 769px) {
-    .about-sub-title {
-        font-family: 'GilroyHeavy';
-        font-size: 1.4rem;
-        color: rgb(53, 51, 51);
-        font-weight: 900;
-        line-height: 1.4rem;
-        letter-spacing: 3px;
-    }
-}
-
-@media (max-width: 320px) {
-    .about-sub-title {
-        font-family: 'GilroyHeavy';
-        font-size: 1.5rem;
-        color: rgb(53, 51, 51);
-        font-weight: 900;
-        line-height: 1.4rem;
-        letter-spacing: 3px;
-    }
-}
-
-.about-para {
-    font-family: 'bifocalsregular';
-    font-size: .95rem;
+.author {
+    font-family: 'Shadows Into Light Two', cursive;
+    font-size: .92rem;
+    letter-spacing: 3px;
     font-weight: 400;
-    color: #504949;
-    line-height: 1.2rem;
 }
 
-#about-parallax {
-    background-image: url(/assets/images/penny.jpg);
-    background-size: cover;
-    background-attachment: fixed;
-    min-height: 400px;
+.hr-1 {
+    max-width: 250px;
+    border: 1px solid black;
+    margin-top: 30px;
+    margin-left: 10px;
+    margin-right: 50px;
+    padding-right: 100px;
 }
 
-.about-card-title {
-    color: rgb(11, 40, 41);
-    font-weight: 700;
-    text-align: left;
-    letter-spacing: -1px;
-    margin-bottom: 20px;
-    font-family: 'gilroyextrabold';
-    font-size: 1.4rem;
-}
-
-.about-col-titles {
-    font-family: 'Libre Baskerville';
-    font-size: 15px;
-    color: rgb(248, 245, 245);
-    font-weight: lighter;
-}
-
-.purpose-row {
-    margin-right: 80px;
-    margin-left: 80px;
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-@media (max-width:768px) {
-    .purpose-row {
-        margin-right: 0px;
-        margin-left: 10px;
-        padding-left: 0px;
-        padding-right: 5px;
-    }
-}
-
-@media (max-width:480px) {
-    .purpose-row {
-        margin-right: 0px;
-        margin-left: 0px;
-        padding-left: 0px;
-        padding-right: 5px;
-    }
-}
-
-@media (max-width: 320px) {
-    .purpose-row {
-        margin-right: 0px;
-        margin-left: 0px;
-        padding-left: 5px;
-        padding-right: 5px;
-    }
-}
-
-@media (max-width: 320px) {
-    h5 {
-        font-family: 'Poiret One';
-        font-weight: 400;
-        font-size: 1rem;
-        letter-spacing: 6px;
-    }
-}
-
-.brave-bold {
-    margin-left: 20px;
-    margin-right: 30px;
-    margin-top: 0px;
-}
-
-@media (max-width: 768px) {
-    .brave-bold,
-    .about-time {
-        width: 280px;
-        margin-left: 0px;
-        margin-right: 5px;
-        margin-top: 0px;
-    }
-}
-
-@media (max-width: 480px) {
-    .brave-bold,
-    .about-time {
-        margin-left: 40px;
-        margin-right: 20px;
-        margin-top: 30px;
-    }
-}
-
-@media (max-width: 320px) {
-    .brave-bold,
-    .about-time {
-        margin-left: 40px;
-        margin-right: 30px;
-        margin-top: 20px;
-    }
-}
-
-@media (max-width: 375px) {
-    .about-time {
-        margin-left: 0px;
-        margin-right: 40px;
-        margin-top: 0px;
-        padding: 10px;
-    }
+.discover-image {
+    max-width: 500px;
+    margin-top: 40px;
+    margin-bottom: 30px;
 }
 
 
 /*login page*/
 
 .bg-image {
-    background-image: url('https://res.cloudinary.com/mhmd/image/upload/v1555917661/art-colorful-contemporary-2047905_dxtao7.jpg');
+    background-image: url("https://res.cloudinary.com/mhmd/image/upload/v1555917661/art-colorful-contemporary-2047905_dxtao7.jpg");
     background-size: cover;
-    background-position: center center;
+    background-position: center;
+}
+
+.post-main-content-wrapper {
+    max-width: 600px;
+    max-height: auto;
+    margin: 10px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.post-image-wrapper {
+    border-radius: 0px;
+    max-width: 400px;
+    max-height: 500px;
+    object-fit: contain;
+    overflow: hidden;
+    margin-bottom: 40px;
+    margin-top: 10px;
+}
+
+.post-image-post {
+    min-width: 200px;
+    min-height: 300px;
+    width: 100%;
+    height: 100%;
+    position: inline-block;
+}
+
+.post-title {
+    font-family: "GilroyHeavy";
+    line-height: .97em;
+    color: black;
+    margin-bottom: 15px;
+}
+
+.post-para {
+    line-height: 1.5rem;
+    font-weight: 350;
+    font-size: 1.2rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
 }
