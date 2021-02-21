@@ -1,0 +1,61 @@
+{% extends "layout.html" %} {% block content %}
+<div>
+    <div class="container d-flex justify-content-center " style="background-color:#fffaf1;">
+        <div class="" style="min-height: 60px;">
+
+        </div>
+        <div class=" post-main-content-wrapper">
+            <div class=" container ">
+                <h2 class="post-title mb-4 " style="color: black; display: flex; justify-content: center;">{{ post.title }}</h2>
+                <div class=" container post-image-wrapper">
+                    <img class=" post-image-post" src="{{url_for( 'static', filename='post_pics/' + post.post_image)}} " class="card-img-top img-responsive " alt="... ">
+                </div>
+
+                <div class=" ">
+                    <div class="container mt-3">
+                        <div class="mb-2 mt-3 " style="width: 60px; height: 2px; background-color: black; ">
+                            <hr class="hr ">
+                        </div>
+                        <div class="article-author m-0" style="display: flex; ">
+                            <a class="article-author" style="font-size: 15px;" href="{{url_for('user_posts', username=post.author.username)}}">
+                                By {{ post.author.username }} 
+                            </a>
+                        </div>
+                    </div>
+                    <div class="container mb-3 social-container-about">
+                        <div class="d-inline-block">
+                            <a href=" ">
+                                <i class="bi bi-facebook social-about"></i>
+                            </a>
+                        </div>
+                        <div class="d-inline-block">
+                            <a href=" ">
+                                <i class="bi bi-twitter social-about"></i>
+                            </a>
+                        </div>
+                        <div class="d-inline-block">
+                            <a href=" ">
+                                <i class="bi bi-instagram social-about"></i>
+                            </a>
+                        </div>
+                        <div class="d-inline-block">
+                            <a href=" ">
+                                <i class="bi bi-linkedin social-about"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="container post-content mt-4">
+                        <p class=" post-para"> {{ post.content }} </p>
+                    </div>
+                </div>
+
+                <div class="container ">
+                    <a href="{{url_for('home')}}" class="arrow ">
+                        <i class=" px-2 bi-arrow-left" style="color:black;font-size: 25px; "></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+    {% endblock content %}
