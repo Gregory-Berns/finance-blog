@@ -39,7 +39,7 @@ class UpdateAccountForm(FlaskForm):
     username = StringField('Username', validators=[
                         DataRequired(), Length(min=2, max=20)])
     email = StringField('Email', validators=[DataRequired(), Email()])
-    picture = FileField('Update Profile Picture', validators=[FileAllowed(['jpg', 'jpeg' 'png', 'svg'])])    
+    picture = FileField('Update Profile Picture', validators=[FileAllowed(['jpg', 'jpeg', 'png', 'svg'])])   
     submit = SubmitField('Update')
 
     def validate_username(self, username):
@@ -57,6 +57,7 @@ class UpdateAccountForm(FlaskForm):
 
 class PostForm (FlaskForm):
     title = StringField('Title', validators=[DataRequired()])
+    #sub_title = StringField('Sub-title', validators=[DataRequired()])
     content = TextAreaField('Content', validators=[DataRequired()])
-    post_picture = FileField('Attach Post Picture', validators=[FileAllowed(['jpg', 'png', 'svg'])])
+    post_picture = FileField('Attach Post Picture', validators=[FileAllowed(['jpg', 'jpeg', 'png', 'svg'])])
     submit = SubmitField('Publish')
