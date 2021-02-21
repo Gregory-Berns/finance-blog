@@ -1,133 +1,162 @@
 {% extends "layout.html" %} {% block content %}
-
 <!--Welcome section-->
-<section class="hero" style="background-color: #617999;">
-    <div class="container  ">
-        <div class=" row container start-page ">
-            <div class="col-md-8 align-content-center container" style="background-color:whitesmoke;">
-                <div class="container">
-                    <div class="container journey ">
-                        <h5 class="top-title"> <span>Millionaire</span> <br> Journey</h5>
-                    </div>
-                    <div class=" container card-rectangle-title" style="background-color: #768a1e;width: 120px;height: 1px; margin-left:60px; "></div>
-                    <br>
-                    <div class="container " style="display: inline-block;">
-                        <div class=" container home-title road-riches mt-0 " style="color: #2E2F26;"> Road to riches</div>
-                        <div class="  join-me-2 pb-1 pt-1 road-riches mt-1 mb-1" style="max-width:300px; font-size:.8rem; line-height: .9rem;">
-                            Join Arnold Schwaltz on a never before shared step-by-step journey to making a million dollars
-                        </div>
+<section class="showcase p-0 m-0">
+    <video class="" src="{{url_for('static', filename='videos/road-trip.mp4')}}" muted loop autoplay class=""></video>
+    <div class="overlay"></div>
+    <div class="container home-wrapper ">
+        <div class=" row container  ">
+            <div class="col-md-7 align-content-center container">
+                <br>
+                <div class="container mt-3 " style="display: inline-block;">
+                    <div class=" mt-0 ">
+                        <h5><span class="million-title mb-2">Millionaire<br><span class="journey">Journey</span></span>
+                        </h5>
                         <br>
-                        <button type="button" class="container card-rectangle-title" style="background-color: rgb(228, 228, 7); width: 120px; height:40px; font-size: .9rem;">
-                                Follow
-                                <div class="" style="display: inline-block;">
-                                    <img src="/assets/icons/icons8-right-arrow-48.png" alt="learn more" style="width:18px; height:17px;">
-                                    <br>
-                                </div>
-                            </button>
-                        <br><br><br>
+                        <span class="road-title"> Road to <br> riches </span>
                     </div>
+                    <div class=" home-join-me">
+                        <p>
+                            Join Arnold Schwaltz on a never before shared step-by-step journey to making a million dollars
+                        </p>
+                        <button type="button" class=" btn follow-btn">
+                            Follow
+                            <div class="follow-arrow">
+                                <img src="{{url_for('static', filename='icons/icons8-right-arrow-48.png')}}" alt="learn more" style="width:18px; height:17px;">
+                                <br>
+                            </div>
+                        </button>
+                    </div>
+                    <div class="social-container">
+                        <div class="d-inline-block social-icons-home">
+                            <a href=" ">
+                                <i class="bi bi-facebook social"></i>
+                            </a>
+                        </div>
+                        <div class="d-inline-block social-icons-home">
+                            <a href=" ">
+                                <i class="bi bi-twitter social"></i>
+                            </a>
+                        </div>
+                        <div class="d-inline-block social-icons-home">
+                            <a href=" ">
+                                <i class="bi bi-instagram social"></i>
+                            </a>
+                        </div>
+                        <div class="d-inline-block social-icons-home">
+                            <a href=" ">
+                                <i class="bi bi-linkedin social"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <br>
                 </div>
             </div>
-            <div class="col-md-3">
-
+            <div class="col-md-4 goal shadow">
+                <div class=" container">
+                    <p class="goal-para mt-2">
+                        <img class="img-responsive m-1 " src="{{ url_for('static', filename='icons/icons8-quote-left-filled.png')}}" alt="" style="width:14px"> <br>
+                        <span> 
+                            Most of the so called millionaires out there whether self made or otherwise never show
+                            you how they went from one dollar to the millions. <br> <br> I am going to dedicate each and every day of my life from today (8th February 2020) to research and try every single idea I can possibly come across and that’s worthy of
+                            testing, in order to prove to myself and you that it is possible and that it can be done. I would like to take this journey with you and not just let you be a passive reader watching things happen. Because we... we deserve better.
+                        </span>
+                        <img src="{{url_for('static', filename='icons/icons8-quote-right-filled.png')}}" alt="" style="width:14px">
+                        <br><br>
+                        <span class="author goal" style="font-weight: lighter;">- Arnold Schwaltz</span>
+                    </p>
+                </div>
+            </div>
+            <div class="container goal-2 shadow">
+                <p class="goal-para">
+                    <img class="img-responsive m-1" src="{{ url_for('static', filename='icons/icons8-quote-left-filled.png')}}" alt="" style="width:14px"> <br>
+                    <span> 
+                        Most of the so called millionaires out there whether self made or otherwise never show
+                        you how they went from one dollar to the millions. I will, join me in this epic road to riches
+                    </span>
+                    <img src="{{url_for('static', filename='icons/icons8-quote-right-filled.png')}}" alt="" style="width:14px">
+                    <br><br>
+                    <span class="author">- Arnold Schwaltz</span>
+                </p>
             </div>
         </div>
     </div>
-    <br>
 </section>
-<br><br>
 <!--End of Welcome section -->
-
-<!-- Objective section-->
-<section class="container " style="background-color:white;">
-    <div class="row container ">
-        <div class="col-md-1 container">
-        </div>
-        <div class="col-md-4 container mt-3 goal-start">
-            <h1 class="about-title" style="letter-spacing: -.8px; color: rgb(19, 53, 77);">Goal <br> </h1>
-            <div class="mb-4" style="width: 60px; height: 2px; background-color: black; ">
-                <hr class="hr ">
-            </div>
-        </div>
-        <div class="col-md-6 container mt-2 goal-start">
-            <p class="about-para" style="font-size:.9rem; line-height: 1rem; font-weight: lighter; max-width: 500px;">
-                <img class="img-responsive m-1" src="/assets/icons/icons8-quote-left-filled.png" alt="" style="width:30px"> <br> Here is why I may not see eye to eye with most of the so called millionaires out there whether self made or otherwise. They
-                never tell you what they actually realistically did to make their first dollar later snowballing into millions. You always get the end part where they finally made the millions. They never show you what they actually did and how they went
-                from one dollar to two and so on up to millions. And some of them even have the audacity to create and sell books or courses and talks further benefiting from the naive aspiring millionaire. <br><br> They are often too vague or too general
-                when revealing what they did step by step, if they ever do. I am going to dedicate each and every day of my life from today (8th February 2020) to research and try every single idea I can possibly come across and that’s worthy of testing,
-                in order to prove to myself and you that it is possible and that it can be done. I would like to take this journey with you and not just let you be a passive reader watching things happen. Because we... we deserve better. <br>
-                <img src="/assets/icons/icons8-quote-right-filled.png" alt="" style="width:30px">
-            </p>
-        </div>
-    </div>
-</section>
-<!-- End of Objective section-->
 <!--Content section -->
+<div class="container progress">
+    <h2>Recent <span> Progress</span></h2>
+</div>
+<div class="container ">
+    <div class="row container post-container">
+        {% for post in posts.items %}
+        <div class="card-column col-md-3">
+            <div class="card h-100 " style="border-radius:0px;">
+                <div class="image-div">
+                    <img src="{{url_for( 'static', filename='post_pics/' + post.post_image)}} " class="card-img-top img-responsive " alt="... " style="border-radius:0px; ">
+                </div>
+                <div class="card-body mb-0 pb-0">
+                    <a href="{{url_for('post', post_id=post.id)}}" style="text-decoration: none;">
+                        <h2 class=" card-title m-0 mb-0 ">{{ post.title }}</h2>
+                    </a>
+                    <p class="card-text mt-2 mb-0 pb-0">{{ post.content | truncate (100) }} </p>
 
-<section class="container">
-    <div class="">
-        <div class=" ">
-            <div class="container  d-flex justify-content-center " style="display: inline-block;">
-                <h2>Recent <span class="">Progress</span> </h2>
-            </div>
-            <br>
-            <div class="row">
-                {% for post in posts %}
-                <div class="card-column col-md-3 justify-content-center mt-4 recent-progress">
-                    <div class="card h-100">
-                        <img src="/assets/images/woman-eyeglasses.jpg " class="card-img-top img-responsive " alt="... ">
-                        <div class="card-body ">
-                            <h2 class=" m-3 ">{{ post.title }}</h2>
-                            <p class="card-text m-3">{{ post.content }} </p>
-                            <p class="card-text m-3">{{ post.date_posted }}</p>
-                            <div class="container ">
-                                <a href="# " class="arrow ">
-                                    <img src="{{ url_for('static', filename='icons8-right-arrow-48.png') }}" style="width: 20px; " alt=" ">
-                                </a>
-                            </div>
+                    <div class=" mb-0 mt-3 article-footer-wrapper">
+                        <div class="article-author">
+                            <a class="article-author" href="{{url_for('user_posts', username=post.author.username)}}">
+                                By {{ post.author.username }} 
+                            </a>
+                        </div>
+                        <div class="article-author">
+                            <time> {{ post.date_posted.strftime('%d %b, %Y') }} </time>
                         </div>
                     </div>
                 </div>
-                {% endfor %}
+                <div class="container mb-2 ">
+                    <a href="{{url_for('post', post_id=post.id)}}" class="arrow ">
+                        <i class="bi bi-arrow-right float-end" style="color:black;font-size: 15px;"></i>
+                    </a>
+                </div>
             </div>
         </div>
+        {% endfor %}
     </div>
+
     <!--Page navigation-->
+
     <div class="container ">
         <nav aria-label="Page navigation example ">
             <ul class="pagination justify-content-center ">
                 <li class="page-item ">
                     <a class="page-link " href="# " aria-label="Previous ">
-                        <img src="/assets/icons/icons8-left-arrow-48.png " style="width: 20px; " alt=" ">
+                        <img src="{{url_for( 'static', filename='icons/icons8-left-arrow-48.png' )}} " style="width: 20px; " alt=" ">
                     </a>
                 </li>
-                <li class="page-item "><a class="page-link " href="# ">1</a></li>
-                <li class="page-item "><a class="page-link " href="# ">2</a></li>
-                <li class="page-item "><a class="page-link " href="# ">3</a></li>
+                {% for page_num in posts.iter_pages(left_edge=1, right_edge=1, left_current=1, right_current=2) %} {% if page_num %} {% if posts.page == page_num%}
+                <li class="page-item active "><a class="page-link " href="{{url_for( 'home', page=page_num)}} ">{{page_num}}</a></li>
+                {% else %}
+                <li class="page-item "><a class="page-link " href="{{url_for( 'home', page=page_num)}} ">{{page_num}}</a></li>
+                {% endif %} {% else %} ... {% endif %} {% endfor %}
                 <li class="page-item ">
                     <a class="page-link " href="# " aria-label="Next ">
-                        <img src="/assets/icons/icons8-right-arrow-48.png " style="width: 20px; " alt=" ">
+                        <img src="{{url_for( 'static', filename='icons/icons8-right-arrow-48.png' )}} " style="width: 20px; " alt=" ">
                     </a>
                 </li>
             </ul>
         </nav>
     </div>
     <!-- End of Page navigation-->
-    </div>
-    </div>
-
-</section>
+</div>
 <!--End of Content section -->
 
 <!--Progress summary section -->
 <section id="progress-notes ">
-    <div class="container">
+    <div class="container ">
         <div class="row ">
-            <div class="col-md-4 py-4 container">
+            <div class="col-md-4 py-4 container ">
                 <div class="container ">
-                    <div class="container  ">
-                        <h2><span class="progress-span">Progress</span>, <br> <span style="text-decoration: underline;">NOT</span> Perfection</h2>
-                        <p class="card-text text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum rerum impedit earum accusantium libero dicta, assumenda praesentium harum cupiditate facilis itaque necessitatibus dolor ratione iusto illo maiores quos quisquam nulla.
+                    <div class="container ">
+                        <h2 style="line-height: 1.5rem;"><span class="progress-span ">Progress</span>, <br> <span class="card-title" style="text-decoration: underline; ">NOT</span> <span class="card-title"> <br> Perfection</span> </h2>
+                        <p class="card-text text-justify ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum rerum impedit earum accusantium libero dicta, assumenda praesentium harum cupiditate facilis itaque necessitatibus dolor ratione iusto illo maiores quos quisquam nulla.
                             <br><br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum rerum impedit earum accusantium libero dicta, assumenda praesentium harum cupiditate facilis itaque necessitatibus dolor ratione iusto illo maiores quos
                             quisquam nulla.
                         </p>
@@ -145,9 +174,9 @@
                         <div class="card special-card h-100 w-100 " style="width: 18rem; display: flex; ">
 
                             <div class="card-body ">
-                                <h3 class="card-title ">Getting Down & Good</h3>
+                                <h3 class="card-title-summary ">Getting Down & Good</h3>
                                 <div class="card-rectangle "></div>
-                                <p class="card-text ">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <p class="card-text ">Some quick example text to build on the card title-summary and make up the bulk of the card's content.</p>
 
                             </div>
                         </div>
@@ -156,9 +185,9 @@
                         <div class="card special-card h-100 w-100 " style="width: 18rem; display: flex; ">
 
                             <div class="card-body ">
-                                <h3 class="card-title ">The Creative Process</h3>
+                                <h3 class="card-title-summary">The Creative Process</h3>
                                 <div class="card-rectangle "></div>
-                                <p class="card-text ">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <p class="card-text ">Some quick example text to build on the card title-summary and make up the bulk of the card's content.</p>
 
                             </div>
                         </div>
@@ -169,18 +198,18 @@
                         <div class="card special-card h-100 w-100 " style="width: 18rem; display: flex; ">
 
                             <div class="card-body ">
-                                <h3 class="card-title ">Tying Things Together</h3>
+                                <h3 class="card-title-summary ">Tying Things Together</h3>
                                 <div class="card-rectangle "></div>
-                                <p class="card-text ">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <p class="card-text ">Some quick example text to build on the card title-summary and make up the bulk of the card's content.</p>
 
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 mb-5 ">
-                        <div class="card special-card h-100 w-100 " style="width: 18rem;">
+                        <div class="card special-card h-100 w-100 " style="width: 18rem; ">
 
                             <div class="card-body ">
-                                <h3 class="card-title ">Developing Platforms & Setting Up Shop</h3>
+                                <h3 class="card-title-summary ">Developing Platforms & Setting Up Shop</h3>
                                 <div class="card-rectangle "></div>
                                 <p class="card-text ">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 

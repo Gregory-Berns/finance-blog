@@ -1,50 +1,49 @@
 {% extends "layout.html" %} {% block content%}
-<div class="container row mb-5 mt-3" , style="background-color: rgb(248, 245, 242)">
-    <div class="col-md-5 container mt-4 bg-white">
-        <div class="container bg-light mt-2 bg-white">
+<div class="container mb-5 mt-3 bg-white" style=" max-width: 500px;">
+
+    <div class=" container mb-5 " style="background-color: rgb(248, 245, 242);">
+        <div style="min-height: 50px; background-color: rgb(248, 245, 242);"></div>
+        <h2 class="card-title d-flex justify-content-center">My Account</h2>
+        <div class="container mt-2  d-flex justify-content-center " style="background-color: rgb(248, 245, 242);">
             <br />
-            <h2>My Account</h2>
-            <img class="rounded-circle img-responsive" src="{{ image_file }}" alt="" style="width: 100px; height: 100px" />
-            <br />
-            <div class="container">
-                <p>
-                    <br />
-                    <span style="text-transform: uppercase">
-						{{ current_user.username}}
-					</span>
-                    <br /> {{ current_user.email}}
-                </p>
-            </div>
+            <img class="  rounded-circle img-responsive" src="{{ image_file }}" alt="" style="width: 100px; height: 100px;background-color: rgb(248, 245, 242);" />
+            <br>
         </div>
-        <div class="bg-white">
-            <div class="login d-flex align-items-center">
+        <div class="bg-white m-3">
+            <div class="bg-white" , style="min-height: 15px;"></div>
+            <div class=" container login d-flex justify-content-center">
                 <!-- Demo content-->
-                <div class="container">
+                <div class=" card-text">
                     <div class="">
-                        <div class="mt-1">
+                        <div class="container mt-1 card-text">
                             <form method="POST" action="" enctype="multipart/form-data">
                                 {{ form.hidden_tag() }}
                                 <div class="form-group mb-3">
-                                    {% if form.username.errors %} {{ form.username(class='form-control border-0 shadow-sm px-4 text-primary is-invalid', id="inputUsername" ,type="username" ,placeholder="Username")}}
+                                    <label class="form-label" for="customFile">{{form.username.label()}}</label> {% if form.username.errors %} {{ form.username(class='form-control border-0 shadow-sm px-2 text-primary is-invalid', id="inputUsername" ,type="username"
+                                    ,placeholder="Username")}}
                                     <div class="invalid-feedback">
                                         {% for error in form.username.errors %}
                                         <span>{{error}}</span> {% endfor %}
                                     </div>
-                                    {% else %} {{ form.username(class='form-control border-0 shadow-sm px-4 text-primary', id="inputUsername" ,type="username" ,placeholder="Username")}} {% endif %}
+                                    {% else %} <span class="card-text">{{ form.username(class='form-control border-1 shadow-sm px-2 ', id="inputUsername" ,type="username" ,placeholder="Username")}}</span> {% endif %}
                                 </div>
                                 <div class="form-group mb-2">
-                                    {% if form.email.errors %} {{ form.email(class='form-control border-0 shadow-sm px-4 text-primary is-invalid', id="inputEmail" ,type="email" ,placeholder="Email")}}
+                                    <label class="form-label" for="customFile">{{form.email.label()}}</label> {% if form.email.errors %} {{ form.email(class='form-control border-1 shadow-sm px-2 text-primary is-invalid', id="inputEmail" ,type="email"
+                                    ,placeholder="Email")}}
                                     <div class="invalid-feedback">
                                         {% for error in form.email.errors %}
                                         <span>{{error}}</span> {% endfor %}
                                     </div>
-                                    {% else %} {{ form.email(class='form-control border-0 shadow-sm px-4 text-primary', id="inputEmail" ,type="username" ,placeholder="Email")}} {% endif %}
+                                    {% else %} {{ form.email(class='form-control border-1 shadow-sm px-2 ', id="inputEmail" ,type="username" ,placeholder="Email")}} {% endif %}
                                 </div>
                                 <div class="form-group mb-2">
-                                    <br /> {{form.picture.label()}} <br /> {{form.picture(class="form-control-file")}} {% if form.picture.errors %} {% for error in form.picture.errors %}
+                                    <br> <label class="form-label" for="customFile">{{form.picture.label()}}</label>
+                                    <br> <br> {{form.picture(class="form-control")}} {% if form.picture.errors %} {% for error in form.picture.errors %}
                                     <span class="text-danger">{{error}}</span> <br /> {% endfor %} {% endif %}
+
                                 </div>
-                                <button type="submit" class="btn btn-dark btn-lg text-uppercase mb-2 mt-3">
+
+                                <button type="submit" class="btn btn-dark btn-lg text-uppercase mb-2 mt-3" style="border-radius: 0px;">
 									Update
 								</button>
                             </form>
@@ -53,7 +52,10 @@
                 </div>
                 <!-- End -->
             </div>
+            <div class="bg-white" , style="min-height: 30px;"></div>
         </div>
+
+        <div style="min-height: 50px;background-color: rgb(248, 245, 242);"></div>
     </div>
 </div>
 {% endblock content %}

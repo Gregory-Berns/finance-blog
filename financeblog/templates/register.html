@@ -3,8 +3,8 @@
     <div class="container">
         <div class="row container">
             <!-- The image half -->
-            <div class="col-md-7 d-none d-md-flex bg-image">
-                <!--<img src="/assets/car-logo.jpg" alt="" class="img-responsive ">-->
+            <div class="col-md-7 d-none d-md-flex bgx-image">
+                <img src="{{url_for('static', filename='images/car-logo.jpg')}}" alt="" class="img-responsive about-image ">
             </div>
 
             <!-- The content half -->
@@ -15,69 +15,53 @@
                     <div class="container">
                         <div class="">
                             <div class=" container">
-                                <h4 class="about-title" style="color: black; font-size: 1.8rem;">CouchMoney</h4>
+                                <h4 class="about-title text-muted" style="color: rgb(54, 49, 49); font-size: 1.8rem; letter-spacing: -1.6px;">Couch Money</h4>
 
-                                <p class="text-muted mb-4">Sign up for a free account</p>
+                                <h2 class=" mb-4 card-title" style="font-size: 1rem;">Sign up for a free account</h2>
                                 <form method="POST" , action="">
                                     {{ form.hidden_tag() }}
-                                    <div class="form-group mb-2">
-                                        {% if form.username.errors %}
-                                            {{ form.username(class='form-control border-0 shadow-sm px-4 text-primary is-invalid', id="inputUsername" ,type="username" ,placeholder="Username")}}
-                                            <div class="invalid-feedback">
-                                            {% for error in form.username.errors  %}
-                                                <span>{{error}}</span>
-                                            {% endfor %}
-                                            </div>
-                                        {% else %}
-                                        {{ form.username(class='form-control border-0 shadow-sm px-4 text-primary', id="inputUsername" ,type="username" ,placeholder="Username")}}
-                                        {% endif %}                                       
+                                    <div class="form-group mb-2 footer-link">
+                                        {% if form.username.errors %} {{ form.username(class='form-control border-1 shadow-sm px-4 text-primary is-invalid', id="inputUsername" ,type="username" ,placeholder="Username")}}
+                                        <div class="invalid-feedback">
+                                            {% for error in form.username.errors %}
+                                            <span>{{error}}</span> {% endfor %}
+                                        </div>
+                                        {% else %} {{ form.username(class='form-control card-text border-1 shadow-sm px-4 text-primary', id="inputUsername" ,type="username" ,placeholder="Username")}} {% endif %}
                                     </div>
                                     <div class="form-group mb-2">
-                                        {% if form.email.errors %}
-                                            {{ form.email(class='form-control border-0 shadow-sm px-4 text-primary is-invalid', id="inputEmail" ,type="email" ,placeholder="Email")}}
-                                            <div class="invalid-feedback">
-                                            {% for error in form.email.errors  %}
-                                                <span>{{error}}</span>
-                                            {% endfor %}
-                                            </div>
-                                        {% else %}
-                                        {{ form.email(class='form-control border-0 shadow-sm px-4 text-primary', id="inputEmail" ,type="username" ,placeholder="Email")}}
-                                        {% endif %} 
+                                        {% if form.email.errors %} {{ form.email(class='form-control border-1 shadow-sm px-4 text-primary is-invalid', id="inputEmail" ,type="email" ,placeholder="Email")}}
+                                        <div class="invalid-feedback">
+                                            {% for error in form.email.errors %}
+                                            <span>{{error}}</span> {% endfor %}
+                                        </div>
+                                        {% else %} {{ form.email(class='form-control card-text border-1 shadow-sm px-4 text-primary', id="inputEmail" ,type="username" ,placeholder="Email")}} {% endif %}
 
                                     </div>
                                     <div class="form-group mb-2">
 
-                                        {% if form.password.errors %}
-                                            {{ form.password(class='form-control border-0 shadow-sm px-4 text-primary is-invalid', id="inputPassword" ,type="password" ,placeholder="Password")}}
-                                            <div class="invalid-feedback">
-                                            {% for error in form.password.errors  %}
-                                                <span>{{error}}</span>
-                                            {% endfor %}
-                                            </div>
-                                        {% else %}
-                                        {{ form.password(class='form-control border-0 shadow-sm px-4 text-primary', id="inputPassword" ,type="password" ,placeholder="Password")}}
-                                        {% endif %} 
+                                        {% if form.password.errors %} {{ form.password(class='form-control border-1 shadow-sm px-4 text-primary is-invalid', id="inputPassword" ,type="password" ,placeholder="Password")}}
+                                        <div class="invalid-feedback">
+                                            {% for error in form.password.errors %}
+                                            <span>{{error}}</span> {% endfor %}
+                                        </div>
+                                        {% else %} {{ form.password(class='form-control card-text border-1 shadow-sm px-4 text-primary', id="inputPassword" ,type="password" ,placeholder="Password")}} {% endif %}
 
                                     </div>
                                     <div class="form-group mb-2 ">
-                                        {% if form.confirm_password.errors %}
-                                            {{ form.confirm_password(class='form-control border-0 shadow-sm px-4 text-primary is-invalid', id="inputPassword" ,type="password" ,placeholder="Confirm password")}}
-                                            <div class="invalid-feedback">
-                                            {% for error in form.confirm_password.erros  %}
-                                                <span>{{error}}</span>
-                                            {% endfor %}
-                                            </div>
-                                        {% else %}
-                                        {{ form.confirm_password(class='form-control border-0 shadow-sm px-4 text-primary', id="inputPassword" ,type="password" ,placeholder="Confirm password")}}
-                                        {% endif %} 
+                                        {% if form.confirm_password.errors %} {{ form.confirm_password(class='form-control border-0 shadow-sm px-4 text-primary is-invalid', id="inputPassword" ,type="password" ,placeholder="Confirm password")}}
+                                        <div class="invalid-feedback">
+                                            {% for error in form.confirm_password.erros %}
+                                            <span>{{error}}</span> {% endfor %}
+                                        </div>
+                                        {% else %} {{ form.confirm_password(class='form-control card-text border-1 shadow-sm px-4 text-primary', id="inputPassword" ,type="password" ,placeholder="Confirm password")}} {% endif %}
 
                                     </div>
 
 
                                     <button type="submit" class="btn btn-dark btn-lg text-uppercase mb-2 mt-3 ">Sign Up</button>
                                     <div class=" text-muted text-center d-flex justify-content-between mt-4">
-                                        <small>Already have an account?
-                                            <a href="{{ url_for('login')}}" class="font-italic text-muted mx-1">
+                                        <small class="card-text">Already have an account?
+                                            <a href="{{ url_for('login')}}" class="font-italic text-muted mx-1 card-text">
                                                 <u>Login</u></a>
                                         </small>
                                         <br>
@@ -99,7 +83,7 @@
 
         </div>
     </div>
-
+    <div class="bg-white" style="min-height: 40px;"></div>
 </section>
 
 {% endblock %}

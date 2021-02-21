@@ -1,7 +1,7 @@
  {% extends "layout.html" %} {% block content %}
 <section class="login container ">
-    <div class="container">
-        <div class="row ">
+    <div class="container " style="max-width: 800px;">
+        <div class="row d-flex justify-content-center">
             <!-- The image half -->
             <div class="col-md-6 d-none d-md-flex bg-image">
                 <!--<img src="/assets/car-logo.jpg" alt="" class="img-responsive ">-->
@@ -9,56 +9,49 @@
 
             <!-- The content half -->
             <div class="col-md-4 bg-light">
-                <div class="login d-flex align-items-center py-5">
+                <div class="login d-flex align-items-center py-2 m-0">
 
                     <!-- Demo content-->
-                    <div class="container">
+                    <div class="container m-0">
                         <div class="">
                             <div class=" container">
-                                <h4 class="about-title" style="color: black; font-size: 1.8rem;">CouchMoney</h4>
+                                <h2 class="card-title" style="color: black; font-size: 1.8rem;">CouchMoney</h2>
 
-                                <p class="text-muted mb-4">Welcome back, login to continue</p>
+                                <p class="text-muted mb-4 card-text">Welcome back, login to continue</p>
                                 <form method="POST" , action="">
                                     {{ form.hidden_tag() }}
                                     <div class="form-group mb-2">
-                                        {% if form.email.errors %}
-                                            {{ form.email(class='form-control border-0 shadow-sm px-4 text-primary is-invalid', id="inputEmail" ,type="email" ,placeholder="Email")}}
-                                            <div class="invalid-feedback">
-                                            {% for error in form.email.erros  %}
-                                                <span>{{error}}</span>
-                                            {% endfor %}
-                                            </div>
-                                        {% else %}
-                                        {{ form.email(class='form-control border-0 shadow-sm px-4 text-primary', id="inputEmail" ,type="username" ,placeholder="Email")}}
-                                        {% endif %} 
+                                        {% if form.email.errors %} {{ form.email(class='form-control border-0 shadow-sm px-4 text-primary is-invalid', id="inputEmail" ,type="email" ,placeholder="Email")}}
+                                        <div class="invalid-feedback">
+                                            {% for error in form.email.erros %}
+                                            <span>{{error}}</span> {% endfor %}
+                                        </div>
+                                        {% else %} {{ form.email(class='form-control border-1 card-text shadow-sm px-4 text-primary', id="inputEmail" ,type="username" ,placeholder="Email")}} {% endif %}
                                     </div>
                                     <div class="form-group mb-2">
 
-                                        {% if form.password.errors %}
-                                            {{ form.password(class='form-control border-0 shadow-sm px-4 text-primary is-invalid', id="inputPassword" ,type="password" ,placeholder="Password")}}
-                                            <div class="invalid-feedback">
-                                            {% for error in form.password.erros  %}
-                                                <span>{{error}}</span>
-                                            {% endfor %}
-                                            </div>
-                                        {% else %}
-                                        {{ form.password(class='form-control border-0 shadow-sm px-4 text-primary', id="inputPassword" ,type="password" ,placeholder="Password")}}
-                                        {% endif %} 
+                                        {% if form.password.errors %} {{ form.password(class='form-control border-0 shadow-sm px-4 text-primary is-invalid', id="inputPassword" ,type="password" ,placeholder="Password")}}
+                                        <div class="invalid-feedback">
+                                            {% for error in form.password.erros %}
+                                            <span>{{error}}</span> {% endfor %}
+                                        </div>
+                                        {% else %} {{ form.password(class='form-control card-text border-1 shadow-sm px-4 text-primary', id="inputPassword" ,type="password" ,placeholder="Password")}} {% endif %}
 
                                     </div>
-                                    <div class="custom-control custom-checkbox mb-3 mt-3">
-                                        {{ form.remember(id="customCheck1", type="checkbox", class="custom-control-input") }}
+                                    <div class="custom-control custom-checkbox mb-3 mt-3 card-text">
+                                        {{ form.remember(id="customCheck1", type="checkbox", class="custom-control-input card-text") }}
                                         <label for="customCheck1" class="custom-control-label small text-muted">Remember password</label>
                                     </div>
-                                    {{ form.submit(type="submit", class="btn btn-dark btn-lg text-uppercase mb-2 mt-2 ")}}
-                                    <a class="small text-muted" href="">Forgot password?</a>
-                                    <div class=" text-muted text-center d-flex justify-content-between mt-4">
-                                        <small>Don't have an account?
-                                            <a href="{{ url_for('register')}}" class="font-italic text-muted mx-1">
-                                                <u>Sign Up</u></a>
+                                    {{ form.submit(type="submit", class="btn btn-dark btn-lg text-uppercase mb-1 mt-1 ")}} <br>
+                                    <a class="small text-muted card-text" href="">Forgot password?</a>
+                                    <div class=" text-muted   mt-1">
+                                        <small class="card-text">Don't have an account?
+                                            <a href="{{ url_for('register')}}" class="font-italic text-muted">
+                                                
+                                                <u class="card-text">Sign Up</u>
+                                            </a>
                                         </small>
                                         <br>
-
                                     </div>
                                     <div>
 
@@ -76,7 +69,7 @@
 
         </div>
     </div>
-
+    <div class="bg-white" style="min-height: 40px;"></div>
 </section>
 
 {% endblock %}
