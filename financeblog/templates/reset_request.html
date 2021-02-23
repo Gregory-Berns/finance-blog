@@ -1,0 +1,44 @@
+{% extends "layout.html" %} {% block content %}
+<section class="login container ">
+    <div class="container " style="max-width: 800px;">
+        <div class=" d-flex justify-content-center">
+            <!-- The content half -->
+            <div class=" bg-light">
+                <div class="login d-flex align-items-center py-2 m-0">
+                    <!-- Demo content-->
+                    <div class="container m-0" style="max-width: 300px;">
+                        <div class="">
+                            <div class=" container">
+                                <h2 class="card-title" style="color: black; font-size: 1.8rem;">CouchMoney</h2>
+
+                                <p class="text-muted mb-4 card-text ">Enter your email to request Password Reset for your account</p>
+                                <form method="POST" , action="">
+                                    {{ form.hidden_tag() }}
+                                    <div class="form-group mb-2">
+                                        {% if form.email.errors %} {{ form.email(class=' card-text form-control border-0 shadow-sm px-4 text-primary is-invalid', id="inputEmail" ,type="email" ,placeholder="Email")}}
+                                        <div class="invalid-feedback">
+                                            {% for error in form.email.errors %}
+                                            <span class="card-text">{{error}}</span> {% endfor %}
+                                        </div>
+                                        {% else %} {{ form.email(class='form-control border-1 card-text shadow-sm px-3 text-primary', id="inputEmail" ,type="username" ,placeholder="Email")}} {% endif %}
+                                    </div>
+                                    <div class="">
+                                        {{ form.submit(type="submit", class="btn btn-outline-dark btn-lg text-capitalize mb-1 mt-1 ")}} <br>
+                                    </div>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- End -->
+
+                </div>
+            </div>
+            <!-- End -->
+
+        </div>
+    </div>
+    <div class="bg-white" style="min-height: 40px;"></div>
+</section>
+
+{% endblock %}
