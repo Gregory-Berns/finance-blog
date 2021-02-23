@@ -1,0 +1,54 @@
+{% extends "layout.html" %} {% block content %}
+<section class="login container ">
+    <div class="container " style="max-width: 800px;">
+        <div class=" d-flex justify-content-center">
+            <!-- The content half -->
+            <div class=" bg-light">
+                <div class="login d-flex align-items-center py-2 m-0">
+                    <!-- Demo content-->
+                    <div class="container m-0" style="max-width: 300px;">
+                        <div class="">
+                            <div class=" container">
+                                <h2 class="card-title" style="color: black; font-size: 1.8rem;">CouchMoney</h2>
+
+                                <p class="text-muted mb-4 card-text ">Enter the new password for your account</p>
+                                <form method="POST" , action="">
+                                    {{ form.hidden_tag() }}
+                                    <div class="form-group mb-2">
+                                        {% if form.password.errors %} {{ form.password(class='form-control border-0 shadow-sm px-4 text-primary is-invalid', id="inputPassword" ,type="password" ,placeholder="Password")}}
+                                        <div class="invalid-feedback">
+                                            {% for error in form.password.errors %}
+                                            <span>{{error}}</span> {% endfor %}
+                                        </div>
+                                        {% else %} {{ form.password(class='form-control border-1 card-text shadow-sm px-2 text-primary', id="inputPassword" ,type="password" ,placeholder="Password")}} {% endif %}
+                                    </div>
+                                    <div class="form-group mb-2 ">
+                                        {% if form.confirm_password.errors %} {{ form.confirm_password(class='form-control border-0 shadow-sm px-2 text-primary is-invalid', id="inputPassword" ,type="password" ,placeholder="Confirm password")}}
+                                        <div class="invalid-feedback">
+                                            {% for error in form.confirm_password.errors %}
+                                            <span>{{error}}</span> {% endfor %}
+                                        </div>
+                                        {% else %} {{ form.confirm_password(class='form-control card-text border-1 shadow-sm px-2 text-primary', id="inputPassword" ,type="password" ,placeholder="Confirm password")}} {% endif %}
+
+                                    </div>
+                                    <div class="container d-flex justify-content-center">
+                                        {{ form.submit(type="submit", class="btn btn-outline-dark btn-lg text-capitalize mb-1 mt-1 ")}} <br>
+                                    </div>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- End -->
+
+                </div>
+            </div>
+            <!-- End -->
+
+        </div>
+    </div>
+    <div class="bg-white" style="min-height: 40px;"></div>
+</section>
+
+{% endblock %}
+</body>
