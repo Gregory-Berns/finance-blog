@@ -89,7 +89,7 @@
 <div class="container ">
     <div class="row container post-container">
         {% for post in posts.items %}
-        <div class="card-column col-md-3">
+        <div class="card-column col-md-3 post-effects">
             <div class="card h-100 " style="border-radius:0px;">
                 <div class="image-div">
                     <img src="{{url_for( 'static', filename='post_pics/' + post.post_image)}} " class="card-img-top img-responsive " alt="... " style="border-radius:0px; ">
@@ -223,4 +223,3 @@
 </section>
 <!--End of Progress summary-->
 {% endblock content %}
-</body>

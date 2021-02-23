@@ -1,57 +1,58 @@
- {% extends "layout.html" %} {% block content %}
-<section class="login container ">
-    <div class="container " style="max-width: 800px;">
-        <div class="row d-flex justify-content-center">
+{% extends "layout.html" %} {% block content %}
+<section class="login container">
+    <div class="container">
+        <div class="row container m-0 p-0">
             <!-- The image half -->
-            <div class="col-md-6 d-none d-md-flex bg-image">
-                <!--<img src="/assets/car-logo.jpg" alt="" class="img-responsive ">-->
+            <div class="col-md-7 d-none d-md-flex bgx-image">
+                <img src="{{url_for('static', filename='images/winding-road-4.jpg')}}" alt="" class="img-responsive about-image ">
             </div>
 
             <!-- The content half -->
             <div class="col-md-4 bg-light">
-                <div class="login d-flex align-items-center py-2 m-0">
+                <div class="login d-flex align-items-center py-5">
 
                     <!-- Demo content-->
-                    <div class="container m-0">
+                    <div class="container register-content">
                         <div class="">
-                            <div class=" container">
-                                <h2 class="card-title" style="color: black; font-size: 1.8rem;">CouchMoney</h2>
+                            <div class=" container register-content-1">
+                                <h4 class="about-title text-muted" style="color: rgb(54, 49, 49); font-size: 1.8rem; letter-spacing: -1.6px;">Couch Money</h4>
 
-                                <p class="text-muted mb-4 card-text">Welcome back, login to continue</p>
+                                <h2 class=" mb-4 card-title" style="font-size: 1rem;">Welcome back, login to continue</h2>
                                 <form method="POST" , action="">
                                     {{ form.hidden_tag() }}
                                     <div class="form-group mb-2">
-                                        {% if form.email.errors %} {{ form.email(class='form-control border-0 shadow-sm px-4 text-primary is-invalid', id="inputEmail" ,type="email" ,placeholder="Email")}}
+                                        {% if form.email.errors %} {{ form.email(class='form-control border-1 shadow-sm px-2 text-primary is-invalid', id="inputEmail" ,type="email" ,placeholder="Email")}}
                                         <div class="invalid-feedback">
-                                            {% for error in form.email.erros %}
+                                            {% for error in form.email.errors %}
                                             <span>{{error}}</span> {% endfor %}
                                         </div>
-                                        {% else %} {{ form.email(class='form-control border-1 card-text shadow-sm px-4 text-primary', id="inputEmail" ,type="username" ,placeholder="Email")}} {% endif %}
+                                        {% else %} {{ form.email(class='form-control card-text border-1 shadow-sm px-2 text-primary', id="inputEmail" ,type="username" ,placeholder="Email")}} {% endif %}
                                     </div>
                                     <div class="form-group mb-2">
-
-                                        {% if form.password.errors %} {{ form.password(class='form-control border-0 shadow-sm px-4 text-primary is-invalid', id="inputPassword" ,type="password" ,placeholder="Password")}}
+                                        {% if form.password.errors %} {{ form.password(class='form-control border-1 shadow-sm px-2 text-primary is-invalid', id="inputPassword" ,type="password" ,placeholder="Password")}}
                                         <div class="invalid-feedback">
-                                            {% for error in form.password.erros %}
+                                            {% for error in form.password.errors %}
                                             <span>{{error}}</span> {% endfor %}
                                         </div>
-                                        {% else %} {{ form.password(class='form-control card-text border-1 shadow-sm px-4 text-primary', id="inputPassword" ,type="password" ,placeholder="Password")}} {% endif %}
-
+                                        {% else %} {{ form.password(class='form-control card-text border-1 shadow-sm px-2 text-primary', id="inputPassword" ,type="password" ,placeholder="Password")}} {% endif %}
                                     </div>
                                     <div class="custom-control custom-checkbox mb-3 mt-3 card-text">
                                         {{ form.remember(id="customCheck1", type="checkbox", class="custom-control-input card-text") }}
                                         <label for="customCheck1" class="custom-control-label small text-muted">Remember password</label>
                                     </div>
-                                    {{ form.submit(type="submit", class="btn btn-dark btn-lg text-uppercase mb-1 mt-1 ")}} <br>
-                                    <a class="small text-muted card-text" href="">Forgot password?</a>
-                                    <div class=" text-muted   mt-1">
-                                        <small class="card-text">Don't have an account?
-                                            <a href="{{ url_for('register')}}" class="font-italic text-muted">
-                                                
-                                                <u class="card-text">Sign Up</u>
-                                            </a>
+
+                                    <button type="submit" class="btn btn-dark text-uppercase mb-2 mt-3 ">Login</button>
+                                    <small>
+                                            <a class="small text-muted card-text" style="letter-spacing: -.9px;" href="{{url_for('reset_request')}}">Forgot password?</a>
+                                    </small>
+
+                                    <div class=" text-muted d-flex justify-content-between mt-4">
+                                        <small class="card-text" style="letter-spacing: -.9px;">Don't have an account?
+                                            <a href="{{ url_for('register')}}" class="font-italic text-muted mx-1 card-text">
+                                            Sign Up</a>
                                         </small>
                                         <br>
+
                                     </div>
                                     <div>
 
@@ -73,4 +74,3 @@
 </section>
 
 {% endblock %}
-</body>
